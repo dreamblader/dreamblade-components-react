@@ -1,6 +1,6 @@
 import React from "react";
 
-const Logo = (props) => (
+export const Logo = (props) => (
   <svg
     width="125mm"
     height="45mm"
@@ -1081,5 +1081,3 @@ const Logo = (props) => (
     </g>
   </svg>
 );
-
-export default Logo;

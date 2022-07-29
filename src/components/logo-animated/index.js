@@ -1,1 +1,1 @@
-export { default } from "./logo-animated";
+export * from "./logo-animated";

@@ -13,12 +13,11 @@ const config = {
     {
       file: packageJson.main,
       format: "cjs",
-      sourcemap: true,
     },
     {
       file: packageJson.module,
-      format: "esm",
-      sourcemap: true,
+      format: "es",
+      exports: "named",
     },
   ],
   plugins: [
