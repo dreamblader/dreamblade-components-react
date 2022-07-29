@@ -1,0 +1,79 @@
+@keyframes glow {
+  0% {
+    stroke-opacity: 0.25;
+    stroke-width: 2.02987;
+  }
+  50% {
+    stroke-opacity: 1;
+    stroke-width: 1;
+  }
+  100% {
+    stroke-opacity: 0.25;
+    stroke-width: 2.02987;
+  }
+}
+
+@keyframes boing {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 0.75);
+  }
+  50% {
+    transform: scale(0.75, 0.5);
+  }
+  75% {
+    transform: scale(0.5, 0.75);
+  }
+  100% {
+    transform: scale(0.75, 1);
+  }
+}
+
+@keyframes text-glow {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.25);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate #text2316,
+.animate #text2320 {
+  animation: text-glow 5s infinite;
+}
+
+/*blade*/
+.animate #path12022 {
+  animation: glow 3s infinite;
+}
+
+/*inner particles*/
+.animate #layer2 > path:nth-child(odd) {
+  animation: fade 3s infinite, boing 0.3s infinite;
+}
+
+.animate #layer2 > path:nth-child(even) {
+  animation: fade 3s 2s infinite, boing 0.3s infinite;
+}
+
+.animate #layer2 > ellipse {
+  animation: fade 3s 1s infinite;
+}
