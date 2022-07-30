@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Logo } from "../logo";
 import run from "../../scripts";
 import "./style.css";
 
 export const LogoAnimated = (props) => {
-  useEffect(() => {
+  React.useEffect(() => {
     run();
   }, []);
   return (

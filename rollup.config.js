@@ -26,7 +26,6 @@ const config = {
     resolve(),
     commonjs(),
     external(),
-    terser(),
   ],
 };
 
