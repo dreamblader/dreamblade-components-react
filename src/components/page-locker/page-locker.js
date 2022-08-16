@@ -14,20 +14,21 @@ export const PageLocker = ({
   const [input, setInput] = React.useState("");
   const [isLocked, setLock] = React.useState(true);
   const [mistakeCount, setMistakeCount] = React.useState(0);
+  const mistakeLife = Math.max(mistakeMax, 0);
 
   const isChildrenEmpty = () => {
     return Boolean(children === undefined || children === null);
   };
 
   const isMistakeOverLimit = () => {
-    return Boolean(mistakeCount >= mistakeMax);
+    return Boolean(mistakeCount >= mistakeMax && mistakeMax > 0);
   };
 
   const checkPass = () => {
-    const unlock = Boolean(input === pass);
+    const unlock = Boolean(input === pass && !isMistakeOverLimit());
     setLock(!unlock);
 
-    if (!unlock) {
+    if (!unlock && !isMistakeOverLimit()) {
       setMistakeCount(mistakeCount + 1);
     }
   };
@@ -50,15 +51,22 @@ export const PageLocker = ({
 
         {!hideMistakeCounter && (
           <div className="mistake-counter">
-            {[...Array(mistakeMax - mistakeCount)].map((e, index) => (
-              <div className="life" key={index}>
-                0
-              </div>
-            ))}
+            {[...Array(mistakeLife)].map((e, index) => {
+              let isGone = index + 1 <= mistakeCount ? "hidden" : "visible";
+              return (
+                <div
+                  className="life"
+                  key={index}
+                  style={{ visibility: isGone }}
+                />
+              );
+            })}
           </div>
         )}
 
-        <button onClick={(e) => checkPass()}>{confirmLabel}</button>
+        {!isMistakeOverLimit() && (
+          <button onClick={(e) => checkPass()}>{confirmLabel}</button>
+        )}
       </div>
     );
   } else {
@@ -68,6 +76,7 @@ export const PageLocker = ({
 
 PageLocker.defaultProps = {
   label: "LOCKED",
+  mistakeMax: 0,
   hideMistakeCounter: false,
   confirmLabel: "OK",
 };

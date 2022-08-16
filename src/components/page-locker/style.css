@@ -8,15 +8,23 @@
 .locker > input {
   border-radius: 1rem;
   text-align: center;
-  margin-bottom: 1rem;
+
+  margin-bottom: 0.5rem;
 }
 
 .locker > .mistake-counter {
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .mistake-counter > .life {
   background-color: red;
+  border: 1px solid black;
+  border-radius: 50%;
+  min-width: 1rem;
+  min-height: 1rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .locker > button {
