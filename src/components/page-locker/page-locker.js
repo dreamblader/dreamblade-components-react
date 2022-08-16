@@ -20,7 +20,7 @@ export const PageLocker = ({
   };
 
   const isMistakeOverLimit = () => {
-    return Boolean(!isNaN(mistakeMax) && mistakeCount >= mistakeMax);
+    return Boolean(mistakeCount >= mistakeMax);
   };
 
   const checkPass = () => {
@@ -29,7 +29,6 @@ export const PageLocker = ({
 
     if (!unlock) {
       setMistakeCount(mistakeCount + 1);
-      console.log(mistakeCount);
     }
   };
 
@@ -39,7 +38,7 @@ export const PageLocker = ({
         `The element Prop.children from PageLocker is not defined and should be`
       );
     }
-    console.log(Array(mistakeMax));
+
     return (
       <div className="locker">
         <h3>{label}</h3>
