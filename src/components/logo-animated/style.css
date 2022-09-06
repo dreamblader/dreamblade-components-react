@@ -67,11 +67,11 @@
 
 /*inner particles*/
 .animate #layer2 > path:nth-child(odd) {
-  animation: dreamblade-fade 3s infinite, boing 0.3s infinite;
+  animation: dreamblade-fade 3s infinite, dreamblade-boing 0.3s infinite;
 }
 
 .animate #layer2 > path:nth-child(even) {
-  animation: dreamblade-fade 3s 2s infinite, boing 0.3s infinite;
+  animation: dreamblade-fade 3s 2s infinite, dreamblade-boing 0.3s infinite;
 }
 
 .animate #layer2 > ellipse {

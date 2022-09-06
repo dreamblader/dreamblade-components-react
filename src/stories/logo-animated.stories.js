@@ -5,4 +5,8 @@ export default {
   component: LogoAnimated,
 };
 
-export const Normal = () => <LogoAnimated />;
+export const Normal = () => (
+  <div style={{ backgroundColor: "blue" }}>
+    <LogoAnimated />
+  </div>
+);

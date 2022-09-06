@@ -1,5 +1,12 @@
 # UPDATES
 
+## Version 1.1.3
+
+### Whats New
+
+- Reverted CSS Modules
+- Fixed Boing animation bug
+
 ## Version 1.1.2
 
 ### Whats New

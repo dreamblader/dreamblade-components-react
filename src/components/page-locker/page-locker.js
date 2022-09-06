@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./locker.module.css";
+import "./style.css";
 
 export const PageLocker = ({
   children,
@@ -41,7 +41,7 @@ export const PageLocker = ({
     }
 
     return (
-      <div className={styles.locker}>
+      <div className="locker">
         <h3>{label}</h3>
         <input
           type="text"
@@ -50,12 +50,12 @@ export const PageLocker = ({
         />
 
         {!hideMistakeCounter && (
-          <div className={styles.mistake_counter}>
+          <div className="mistake-counter">
             {[...Array(mistakeLife)].map((e, index) => {
               let isGone = index + 1 <= mistakeCount ? "hidden" : "visible";
               return (
                 <div
-                  className={styles.life}
+                  className="life"
                   key={index}
                   style={{ visibility: isGone }}
                 />
