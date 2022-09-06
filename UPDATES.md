@@ -1,5 +1,12 @@
 # UPDATES
 
+## Version 1.1.2
+
+### Whats New
+
+- Added .module in CSS styles to prevent duplication clash
+- Added Unique names to animation to prevent duplication clash
+
 ## Version 1.1.1
 
 ### Whats New

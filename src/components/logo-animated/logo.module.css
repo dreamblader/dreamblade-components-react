@@ -1,4 +1,4 @@
-@keyframes glow {
+@keyframes dreamblade-glow {
   0% {
     stroke-opacity: 0.25;
     stroke-width: 2.02987;
@@ -13,7 +13,7 @@
   }
 }
 
-@keyframes boing {
+@keyframes dreamblade-boing {
   0% {
     transform: scale(1, 1);
   }
@@ -31,7 +31,7 @@
   }
 }
 
-@keyframes text-glow {
+@keyframes dreamblade-text-glow {
   0% {
     filter: brightness(1);
   }
@@ -43,7 +43,7 @@
   }
 }
 
-@keyframes fade {
+@keyframes dreamblade-fade {
   0% {
     opacity: 0;
   }
@@ -57,23 +57,23 @@
 
 .animate #text2316,
 .animate #text2320 {
-  animation: text-glow 5s infinite;
+  animation: dreamblade-text-glow 5s infinite;
 }
 
 /*blade*/
 .animate #path12022 {
-  animation: glow 3s infinite;
+  animation: dreamblade-glow 3s infinite;
 }
 
 /*inner particles*/
 .animate #layer2 > path:nth-child(odd) {
-  animation: fade 3s infinite, boing 0.3s infinite;
+  animation: dreamblade-fade 3s infinite, boing 0.3s infinite;
 }
 
 .animate #layer2 > path:nth-child(even) {
-  animation: fade 3s 2s infinite, boing 0.3s infinite;
+  animation: dreamblade-fade 3s 2s infinite, boing 0.3s infinite;
 }
 
 .animate #layer2 > ellipse {
-  animation: fade 3s 1s infinite;
+  animation: dreamblade-fade 3s 1s infinite;
 }
