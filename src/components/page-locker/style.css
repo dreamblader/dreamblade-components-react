@@ -11,12 +11,12 @@
   margin-bottom: 0.5rem;
 }
 
-.locker > .mistake_counter {
+.locker > .mistake-counter {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.mistake_counter > .life {
+.mistake-counter > .life {
   background-color: red;
   border: 1px solid black;
   border-radius: 50%;
